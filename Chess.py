@@ -1,10 +1,11 @@
 
 import pygame
 import random
+import os
 
 pygame.init()
 clock=pygame.time.Clock()
-icon = pygame.image.load("E:\Studies\Python\Projects\Games\Chess\Data\icon.png")
+icon = pygame.image.load("./Data/icon.png")
 pygame.display.set_caption("Chess")
 pygame.display.set_icon(icon)
 screen = pygame.display.set_mode((700,525)) 
@@ -29,7 +30,7 @@ KnightMotion = False
 TopLeftTempConst = 0
 KingMotionNum=0
 ############################BackGround########################################################################################
-Background = pygame.image.load("E:\Studies\Python\Projects\Games\Chess\Data\BG.png")
+Background = pygame.image.load("./Data/BG.png")
 LeftBorder=132
 SquareSide=56.34
 #
@@ -252,61 +253,61 @@ print(DefColor)
 
 if DefColor==0:
     ##White is facing upwards
-    PawnUpImage = pygame.image.load("E:\Studies\Python\Projects\Games\Chess\Data\WhiteUp\PawnWU.png") #White Up
+    PawnUpImage = pygame.image.load("./Data/WhiteUp/PawnWU.png") #White Up
 
-    KnightUImage = pygame.image.load("E:\Studies\Python\Projects\Games\Chess\Data\WhiteUp\KnightWU.png")
+    KnightUImage = pygame.image.load("./Data/WhiteUp/KnightWU.png")
 
-    BishopUImage = pygame.image.load("E:\Studies\Python\Projects\Games\Chess\Data\WhiteUp\BishopWU.png")
+    BishopUImage = pygame.image.load("./Data/WhiteUp/BishopWU.png")
 
-    RookUImage = pygame.image.load("E:\Studies\Python\Projects\Games\Chess\Data\WhiteUp\RookWU.png")
+    RookUImage = pygame.image.load("./Data/WhiteUp/RookWU.png")
     
-    QueenUImage = pygame.image.load("E:\Studies\Python\Projects\Games\Chess\Data\WhiteUp\QueenWU.png")
+    QueenUImage = pygame.image.load("./Data/WhiteUp/QueenWU.png")
 
-    KingUImage = pygame.image.load("E:\Studies\Python\Projects\Games\Chess\Data\WhiteUp\KingWU.png")
+    KingUImage = pygame.image.load("./Data/WhiteUp/KingWU.png")
 
-    PawnChangeImage = pygame.image.load("E:\Studies\Python\Projects\Games\Chess\Data\WhitePawnChange.png")
+    PawnChangeImage = pygame.image.load("./Data/WhitePawnChange.png")
 
     ##Black is facing downwards
-    PawnDownImage = pygame.image.load("E:\Studies\Python\Projects\Games\Chess\Data\BlackDown\PawnBD.png") ##Black down
+    PawnDownImage = pygame.image.load("./Data/BlackDown/PawnBD.png") ##Black down
 
-    KnightDImage = pygame.image.load("E:\Studies\Python\Projects\Games\Chess\Data\BlackDown\KnightBD.png")
+    KnightDImage = pygame.image.load("./Data/BlackDown/KnightBD.png")
 
-    BishopDImage = pygame.image.load("E:\Studies\Python\Projects\Games\Chess\Data\BlackDown\BishopBD.png")
+    BishopDImage = pygame.image.load("./Data/BlackDown/BishopBD.png")
 
-    RookDImage = pygame.image.load("E:\Studies\Python\Projects\Games\Chess\Data\BlackDown\RookBD.png")
+    RookDImage = pygame.image.load("./Data/BlackDown/RookBD.png")
 
-    QueenDImage = pygame.image.load("E:\Studies\Python\Projects\Games\Chess\Data\BlackDown\QueenBD.png")
+    QueenDImage = pygame.image.load("./Data/BlackDown/QueenBD.png")
 
-    KingDImage = pygame.image.load("E:\Studies\Python\Projects\Games\Chess\Data\BlackDown\KingBD.png")
+    KingDImage = pygame.image.load("./Data/BlackDown/KingBD.png")
     ##
 elif 1:
         ##Black facing upwards
-    PawnUpImage = pygame.image.load("E:\Studies\Python\Projects\Games\Chess\Data\BlackUp\PawnBU.png") ##Black up
+    PawnUpImage = pygame.image.load("./Data/BlackUp/PawnBU.png") ##Black up
 
-    KnightUImage = pygame.image.load("E:\Studies\Python\Projects\Games\Chess\Data\BlackUp\KnightBU.png")
+    KnightUImage = pygame.image.load("./Data/BlackUp/KnightBU.png")
 
-    BishopUImage = pygame.image.load("E:\Studies\Python\Projects\Games\Chess\Data\BlackUp\BishopBU.png")
+    BishopUImage = pygame.image.load("./Data/BlackUp/BishopBU.png")
 
-    RookUImage = pygame.image.load("E:\Studies\Python\Projects\Games\Chess\Data\BlackUp\RookBU.png")
+    RookUImage = pygame.image.load("./Data/BlackUp/RookBU.png")
     
-    QueenUImage = pygame.image.load("E:\Studies\Python\Projects\Games\Chess\Data\BlackUp\QueenBU.png")
+    QueenUImage = pygame.image.load("./Data/BlackUp/QueenBU.png")
 
-    KingUImage = pygame.image.load("E:\Studies\Python\Projects\Games\Chess\Data\BlackUp\KingBU.png")
+    KingUImage = pygame.image.load("./Data/BlackUp/KingBU.png")
 
-    PawnChangeImage = pygame.image.load("E:\Studies\Python\Projects\Games\Chess\Data\BlackPawnChange.png")
+    PawnChangeImage = pygame.image.load("./Data/BlackPawnChange.png")
 
     ##White is facing downwards
-    PawnDownImage= pygame.image.load("E:\Studies\Python\Projects\Games\Chess\Data\WhiteDown\PawnWD.png") ##White down
+    PawnDownImage= pygame.image.load("./Data/WhiteDown/PawnWD.png") ##White down
 
-    KnightDImage = pygame.image.load("E:\Studies\Python\Projects\Games\Chess\Data\WhiteDown\KnightWD.png")
+    KnightDImage = pygame.image.load("./Data/WhiteDown/KnightWD.png")
 
-    BishopDImage = pygame.image.load("E:\Studies\Python\Projects\Games\Chess\Data\WhiteDown\BishopWD.png")
+    BishopDImage = pygame.image.load("./Data/WhiteDown/BishopWD.png")
 
-    RookDImage = pygame.image.load("E:\Studies\Python\Projects\Games\Chess\Data\WhiteDown\RookWD.png")
+    RookDImage = pygame.image.load("./Data/WhiteDown/RookWD.png")
 
-    QueenDImage = pygame.image.load("E:\Studies\Python\Projects\Games\Chess\Data\WhiteDown\QueenWD.png")
+    QueenDImage = pygame.image.load("./Data/WhiteDown/QueenWD.png")
 
-    KingDImage = pygame.image.load("E:\Studies\Python\Projects\Games\Chess\Data\WhiteDown\KingWD.png")
+    KingDImage = pygame.image.load("./Data/WhiteDown/KingWD.png")
     #
 #################Defining pieces
 
